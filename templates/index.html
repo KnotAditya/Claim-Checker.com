@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Emirates ID Information</title>
+    <style>
+        form {
+            padding: 20px;
+            margin: 20px;
+        }
+        label, input {
+            margin-bottom: 10px; /* Adds space between form elements */
+        }
+        input[type="text"], input[type="date"] {
+            width: 300px; /* Width of the text boxes */
+            height: 25px; /* Height of the text boxes */
+            margin-bottom: 15px; /* Space below each input field */
+        }
+        input[type="submit"] {
+            width: 150px;
+            height: 40px;
+            margin-top: 15px; /* Space above the submit button */
+        }
+        .error-message {
+            color: red;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Enter Emirates ID Information</h1>
+        {% if message %}
+            <p class="error-message">{{ message }}</p>
+        {% endif %}
+        <form action="/submit-id-info" method="post">
+            <label for="idNumber">ID Number:</label><br>
+            <input type="text" name="idNumber" required><br>
+
+            <label for="fullName">Full Name:</label><br>
+            <input type="text" name="fullName" required><br>
+
+            <label for="nationality">Nationality:</label><br>
+            <input type="text" name="nationality" required><br>
+
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" name="dob" required><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </center>
+</body>
+</html>
