@@ -19,14 +19,11 @@ def process_id_info():
             message = "Invalid ID number"
             return render_template('index.html', message=message)
         
-        print(vidur_account)
-        
         Number = False
         Name = False
         dob = False
         Nation = False
         
-        print(id_number)
         if id_number == vidur_account["emirates_IDs"]:
             Number = True
         
@@ -39,11 +36,6 @@ def process_id_info():
         if nationality == vidur_account["Nationality"]:
             Nation = True
         
-        print(Number)
-        print(Name)
-        print(dob)
-        print(Nation)
-                
         if Number and Name and dob and Nation:
             response = f"Hello {full_name}, your information has been recorded"
             return response
