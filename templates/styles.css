@@ -1,0 +1,21 @@
+form {
+    padding: 20px;
+    margin: 20px;
+}
+label, input {
+    margin-bottom: 10px; /* Adds space between form elements */
+}
+input[type="text"], input[type="date"] {
+    width: 300px; /* Width of the text boxes */
+    height: 25px; /* Height of the text boxes */
+    margin-bottom: 15px; /* Space below each input field */
+}
+input[type="submit"] {
+    width: 150px;
+    height: 40px;
+    margin-top: 15px; /* Space above the submit button */
+}
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+}
