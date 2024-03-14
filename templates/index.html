@@ -1,30 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Check</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Claim Checker</title>
+    <style>
+        /* Add the CSS code provided above here */
+    </style>
 </head>
 <body>
     <center>
-        <h1>Enter Emirates ID Information</h1>
+        <img class="background-img" src="https://assets-global.website-files.com/5a9ee6416e90d20001b20038/6289f89c1971ae10ce01b98b_green-blue-gradient.png" width="1000px" height="1000px">
+        <h1 class="header1">Enter Emirates ID Information</h1>
         {% if message %}
             <p class="error-message">{{ message }}</p>
         {% endif %}
-        <form action="/submit-id-info" method="post">
-            <label for="idNumber">ID Number:</label><br>
-            <input type="text" name="idNumber" required><br>
-
-            <label for="fullName">Full Name:</label><br>
-            <input type="text" name="fullName" required><br>
-
-            <label for="nationality">Nationality:</label><br>
-            <input type="text" name="nationality" required><br>
-
-            <label for="dob">Date of Birth:</label><br>
-            <input type="date" name="dob" required><br>
-
-            <input type="submit" value="Submit">
-        </form>
+        <div class="form-container">
+            <form action="/submit-id-info" method="post">
+                <table class="info-table">
+                    <tr>
+                        <th><label for="idNumber">ID Number:</label></th>
+                        <td><input type="text" name="idNumber" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="fullName">Full Name:</label></th>
+                        <td><input type="text" name="fullName" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="nationality">Nationality:</label></th>
+                        <td><input type="text" name="nationality" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="dob">Date of Birth:</label></th>
+                        <td><input type="date" name="dob" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" value="Submit" class="submit-button"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </center>
 </body>
 </html>

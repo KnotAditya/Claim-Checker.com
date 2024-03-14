@@ -1,21 +1,242 @@
-form {
-    padding: 20px;
-    margin: 20px;
+.background-img {
+    width: 100vw; /* Set width to 100% of viewport width */
+    height: 100vh; /* Set height to 100% of viewport height */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
-label, input {
-    margin-bottom: 10px; /* Adds space between form elements */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: deepskyblue;
+    background-image: url('https://assets-global.website-files.com/5a9ee6416e90d20001b20038/6289f89c1971ae10ce01b98b_green-blue-gradient.png');
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    /* overflow: hidden; */ /* Prevent any overflow */
 }
+
+.form-container {
+    padding: 30px; /* Adjusted padding */
+    margin-top: 50px; /* Adjusted margin */
+    margin-left: 15px;
+    background-color: #ffffff;
+    border: 2px solid #000;
+    width: 500px; /* Adjust container width as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the form container horizontally and vertically */
+    z-index: 2;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9; /* Background color for the table */
+    font-family: Arial, sans-serif;
+}
+
+.info-table td,
+.info-table th {
+    padding: 10px;
+    border: 1px solid #ddd; /* Border color for table cells */
+    text-align: left; /* Align text to the left */
+}
+
+.info-table th {
+    background-color: #007bff; /* Header background color */
+    color: white; /* Header text color */
+}
+/* Add hover effect to table rows */
+.info-table tr:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+label {
+    font-weight: bold;
+}
+
 input[type="text"], input[type="date"] {
-    width: 300px; /* Width of the text boxes */
-    height: 25px; /* Height of the text boxes */
-    margin-bottom: 15px; /* Space below each input field */
+    width: 95%; /* Full width of the cell */
+    height: 25px;
+    margin-bottom: 15px;
+    margin-right: 20px;
 }
+
 input[type="submit"] {
     width: 150px;
     height: 40px;
-    margin-top: 15px; /* Space above the submit button */
+    margin-top: 15px;
 }
+
 .error-message {
     color: red;
-    margin-bottom: 15px;
+    position: absolute; /* Position absolutely */
+    top: 140px; /* Adjust top position */
+    left: 50%; /* Align to center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    font-style: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.header1 {
+    z-index: 4; /* Set higher z-index */
+    position: absolute; /* Position absolutely */
+    top: 50px; /* Adjust top position */
+    left: 50%; /* Align to center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px; /* Adjust font size as needed */
+            font-weight: bold; /* Make the text bold */
+            color: lightgrey; /* Set the color of the text */
+            text-shadow: 
+                -2px -2px 0 #000,  
+                2px -2px 0 #000,
+                -2px 2px 0 #000,
+                2px 2px 0 #000; 
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 15px 30px;
+    color: #000000; /* Text color white */
+    background-color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border: 2px solid black; /* Remove default button border */
+    border-radius: 10px;
+    margin-left: 160px;
+}
+
+.submit-button:hover {
+    background-image: linear-gradient(to right, #38d2f9 0%, #4391e9 100%);
+    color: #050801; /* Text color change on hover */
+    transition: background-image 0.3s, color 0.3s; /* Smooth transition for background image and text color */
+}
+
+
+
+.submit-button span {
+    position: absolute;
+    display: block;
+}
+
+.submit-button span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+/* Define keyframes for animation as in the first code */
+
+/* Additional keyframes and styles as in the first code */
+.submit-button:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+
+.submit-button:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+
+.submit-button span {
+    position: absolute;
+    display: block;
+}
+
+.submit-button span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.submit-button:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,
+            transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.submit-button span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.submit-button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+
+.result-header, .result-p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: bold;
 }

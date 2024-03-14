@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-
+#not connected to database.py
 app = Flask(__name__)
 
 @app.route('/')
