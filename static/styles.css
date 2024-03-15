@@ -23,6 +23,7 @@ body {
     margin-left: 15px;
     background-color: #ffffff;
     border: 2px solid #000;
+    border-radius: 5px;
     width: 500px; /* Adjust container width as needed */
     position: absolute;
     top: 50%;
@@ -107,14 +108,14 @@ input[type="submit"] {
     background-color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     border: 2px solid black; /* Remove default button border */
     border-radius: 10px;
     margin-left: 160px;
 }
 
 .submit-button:hover {
-    background-image: linear-gradient(to right, #38d2f9 0%, #4391e9 100%);
+    background-image: linear-gradient(to right, #38a9f9 0%, #ef6dae 100%);
     color: #050801; /* Text color change on hover */
     transition: background-image 0.3s, color 0.3s; /* Smooth transition for background image and text color */
 }
