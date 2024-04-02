@@ -112,12 +112,14 @@ input[type="submit"] {
     border: 2px solid black; /* Remove default button border */
     border-radius: 10px;
     margin-left: 160px;
+    transition: transform 0.3s ease, background-image 0.3s, color 0.3s;
 }
 
 .submit-button:hover {
     background-image: linear-gradient(to right, #38a9f9 0%, #ef6dae 100%);
     color: #050801; /* Text color change on hover */
-    transition: background-image 0.3s, color 0.3s; /* Smooth transition for background image and text color */
+    transition: background-image 0.3s, color 0.3s; 
+    transform: scale(1.1);
 }
 
 
@@ -240,4 +242,16 @@ input[type="submit"] {
 .result-header, .result-p {
     font-family: Arial, Helvetica, sans-serif;
     font-style: bold;
+}
+
+input[type="text"], input[type="date"] {
+    width: 95%; /* Full width of the cell */
+    height: 25px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    transform: scale(1.05); /* Slightly grow the input box size on focus */
 }
