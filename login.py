@@ -22,7 +22,7 @@ def process_id_info():
             date_of_birth == vidur_account["dateofbirth"] and 
             nationality == vidur_account["Nationality"]):
             # Redirect to success page if validation is successful
-            return render_template('result.html', full_name=full_name)
+            return render_template('claims.html', full_name=full_name)
         else:
             # Stay on the current page and show an error message if validation fails
             message = "Invalid information. Please enter the correct information."
